@@ -1,0 +1,261 @@
+body {
+  background: #e7e7e7;
+}
+
+html {
+  font-size: 66.5%;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+  text-transform: capitalize;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.img-gallery {
+  width: 100%;
+  float: left;
+  padding: 0px 15px;
+}
+
+.filterContent {
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  height: 20%;
+
+  justify-content: space-between;
+}
+
+input {
+  display: none;
+}
+
+button {
+  display: inline-block;
+  height: 100%;
+  padding: 2%;
+  line-height: 40px;
+  align-self: center;
+  background-color: #e0dddd;
+  min-width: 20%;
+  font-size: medium;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgb(125, 125, 125);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b8b6b6;
+}
+
+.container .title {
+  font-size: 3.5rem;
+  color: #444;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.img-gallery .gallery-items .item {
+  float: left;
+  position: relative;
+}
+.img-gallery .gallery-items .item.hide {
+  display: none;
+}
+.img-gallery .gallery-items .item.show {
+  display: block;
+  animation: show 0.5s ease;
+}
+.img-gallery .gallery-items .item.hide {
+  display: none;
+}
+
+#fullImageView {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#fullImage {
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#prevButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+  left: 5%;
+}
+
+#nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+  right: 5%;
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.img-gallery .pagination {
+  width: 100%;
+  float: left;
+  padding: 15px;
+  text-align: center;
+}
+.img-gallery .pagination div {
+  display: inline-block;
+  margin: 0 10px;
+}
+.img-gallery .pagination .page {
+  color: gray;
+}
+.img-gallery .pagination .prev,
+.img-gallery .pagination .next {
+  color: #000;
+  border: 1px solid #000;
+  font-size: 15px;
+  padding: 7px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+.img-gallery .pagination .prev.disabled,
+.img-gallery .pagination .next.disabled {
+  border-color: gray;
+  color: gray;
+  pointer-events: none;
+}
+
+.container .gallery-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.container .gallery-items .item {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(220, 25, 25, 0.1);
+  outline: 0.1rem solid #ccc;
+  outline-offset: -1.5rem;
+  cursor: pointer;
+}
+
+.container .gallery-items .item:hover {
+  outline: 0.2rem solid #b6b6b6;
+  outline-offset: 0;
+}
+
+.container .gallery-items .item img {
+  height: 18rem;
+}
+
+.container .gallery-items .item:hover img {
+  transform: scale(0.9);
+}
+
+.container .gallery-items .item h3 {
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  color: #444;
+}
+
+.container .gallery-items .item:hover h3 {
+  color: #27ae60;
+}
+
+.container .gallery-items .item .price {
+  font-size: 2rem;
+  color: #444;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-preview .preview img {
+    height: 25rem;
+  }
+  #prevButton,
+  #nextButton {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .filterContent {
+    margin: 0 auto 20px auto;
+    display: flex;
+    height: 20%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .common1 {
+    min-width: 60%;
+  }
+}

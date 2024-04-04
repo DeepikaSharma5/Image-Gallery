@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Cyber Sierra - Deepika</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+   <section class="img-gallery">
+      <div class="container">
+         <h3 class="title">Singapore</h3>
+
+         <!-- Filters for images  -->
+         <div class="filterContent">
+            <button class="common1 active" data-filter="all">
+               <center>All</center>
+            </button>
+            <button class="common1" data-filter="port">
+               <center>Changi Airport</center>
+            </button>
+            <button class="common1" data-filter="bay">
+               <center>Marina Bay</center>
+            </button>
+            <button class="common1" data-filter="other">
+               <center>Other</center>
+            </button>
+
+         </div>
+
+         <!-- Image Gallery  -->
+         <div class="gallery-items">
+            <div class="item port">
+               <img src="images/1.jpeg" alt="gallery" onclick="FullView(this.src)" />
+               <h1>Singapore Jewel with Rain Vortex</h1>
+
+            </div>
+            <div class="item bay">
+               <img src="images/2.jpeg" alt="gallery" onclick="FullView(this.src)" />
+               <h1>Singapore's Marina Bay at Sunset</h1>
+            </div>
+            <div class="item bay">
+               <img src="images/3.jpeg" alt="gallery" onclick="FullView(this.src)" />
+               <h1>Marina Bay Sands</h1>
+            </div>
+            <div class="item bay">
+               <img src="images/4.jpeg" alt="gallery" onclick="FullView(this.src)" />
+               <h1>Art Science Museum</h1>
+            </div>
+            <div class="item bay">
+               <img src="images/5.jpg" alt="gallery" onclick="FullView(this.src)" />
+               <h1>Singapore Fountain with Lightshow in Marina Bay</h1>
+            </div>
+            <div class="item other">
+               <img src="images/6.jpg" alt="gallery" onclick="FullView(this.src)" />
+               <h1>Supertrees in Gardens By The Bay</h1>
+            </div>
+            <div class="item other">
+               <img src="images/7.jpg" alt="gallery" onclick="FullView(this.src)" />
+               <h1>Gardens By The Bay</h1>
+            </div>
+            <div class="item other">
+               <img src="images/8.jpg" alt="gallery" onclick="FullView(this.src)" />
+               <h1>Cloud Forest at Gardens By The Bay</h1>
+            </div>
+            <div class="item other">
+               <img src="images/9.jpeg" alt="gallery" onclick="FullView(this.src)" />
+               <h1>Singapore's Merlion</h1>
+            </div>
+            <div class="item other">
+               <img src="images/10.jpg" alt="gallery" onclick="FullView(this.src)" />
+               <h1>Sentosa Island beaches</h1>
+            </div>
+            <div class="item other">
+               <img src="images/11.jpg" alt="gallery" onclick="FullView(this.src)" />
+               <h1>Sentosa - Fun for the whole family</h1>
+            </div>
+
+         </div>
+
+         <!-- Full View of Image  -->
+         <div id="fullImageView">
+            <span id="prevButton" onclick="prevImage()">&#10094;</span>
+            <img id="fullImage" />
+            <span id="nextButton" onclick="nextImage()">&#10095;</span>
+            <span id="closeButton" onclick="CloseFullView()">&times;</span>
+         </div>
+
+         <!-- Pagination for images  -->
+         <div class="pagination" id="pagination">
+            <div class="prev">Prev</div>
+            <div class="page">Page <span class="page-num"></span></div>
+            <div class="next">Next</div>
+         </div>
+      </div>
+   </section>
+
+   <script src="js/script.js"></script>
+</body>
+
+</html>
