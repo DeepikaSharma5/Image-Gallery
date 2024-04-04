@@ -40,6 +40,14 @@ html {
   justify-content: space-between;
 }
 
+.filterContent .common1 {
+  font-size: 22px;
+}
+
+.img-gallery .gallery-items .item .subTitle {
+  font-size: 17px;
+}
+
 input {
   display: none;
 }
